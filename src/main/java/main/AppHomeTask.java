@@ -10,7 +10,7 @@ import javax.persistence.EntityManager;
 import java.time.LocalDate;
 
 public class AppHomeTask {
-    public static final int COST_FOR_WORK_TASK = 400;
+    public static final int COST_FOR_WORK_TASK = 500;
 
     public static void main(final String[] args) {
         Task homeTask = HomeTask.builder()
