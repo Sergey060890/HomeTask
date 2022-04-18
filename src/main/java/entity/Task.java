@@ -29,18 +29,14 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Entity
 @Table(name = "Task")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "TASK_TYPE",
-        discriminatorType = DiscriminatorType.CHAR)
-@DiscriminatorValue("T")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @NamedQuery(name = "Task", query = "SELECT t from Task t")
 public class Task implements Serializable {
     /**
      * Id field.
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "TASK_ID")
+    @GeneratedValue
     private Integer id;
     /**
      * Name field.

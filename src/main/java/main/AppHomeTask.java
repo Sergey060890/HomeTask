@@ -26,13 +26,14 @@ public class AppHomeTask {
                 .description("WorkTask")
                 .cost(COST_FOR_WORK_TASK)
                 .build();
+
         Task task1 = Task.builder()
-                .name("Task5")
-                .description("Homework3")
+                .name("Task1")
+                .description("Homework")
                 .build();
         Task task2 = Task.builder()
-                .name("Task6")
-                .description("WorkTask3")
+                .name("Task2")
+                .description("WorkTask")
                 .build();
 
 
