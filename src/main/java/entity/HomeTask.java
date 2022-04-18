@@ -23,9 +23,9 @@ import java.time.LocalDate;
 @Table(name = "HomeTask")
 @Entity
 @SuperBuilder
-@DiscriminatorValue("H")
 @NamedQuery(name = "HomeTask", query = "SELECT ht from HomeTask ht")
 public class HomeTask extends Task {
+    private final static long serialVersionUID= 6L;
     @Column
     private LocalDate startDate;
     @Column
