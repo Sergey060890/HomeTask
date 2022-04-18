@@ -11,6 +11,7 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 /**
  * Class WorkTask
@@ -22,6 +23,7 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @DiscriminatorValue("W")
+@PrimaryKeyJoinColumn(name = "TASK_ID")
 public class WorkTask extends Task {
     /**
      * Cost field.
