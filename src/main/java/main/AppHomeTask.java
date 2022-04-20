@@ -27,11 +27,22 @@ public class AppHomeTask {
                 .cost(COST_FOR_WORK_TASK)
                 .build();
 
+        Task task1 = Task.builder()
+                .name("Task1")
+                .description("Homework")
+                .build();
+        Task task2 = Task.builder()
+                .name("Task2")
+                .description("WorkTask")
+                .build();
+
 
         EntityManager em = HibernateUtil.getEntityManager();
         em.getTransaction().begin();
         em.persist(homeTask);
         em.persist(workTask);
+        em.persist(task1);
+        em.persist(task2);
         em.getTransaction().commit();
         em.close();
     }
