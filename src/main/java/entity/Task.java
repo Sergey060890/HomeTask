@@ -29,7 +29,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Entity
 @Table(name = "Task")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "TASK_TYPE",
         discriminatorType = DiscriminatorType.CHAR)
 @DiscriminatorValue("T")

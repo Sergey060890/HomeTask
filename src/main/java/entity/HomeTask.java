@@ -12,6 +12,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import java.time.LocalDate;
 /**
@@ -25,6 +26,7 @@ import java.time.LocalDate;
 @SuperBuilder
 @DiscriminatorValue("H")
 @NamedQuery(name = "HomeTask", query = "SELECT ht from HomeTask ht")
+@PrimaryKeyJoinColumn(name = "TASK_ID")
 public class HomeTask extends Task {
     @Column
     private LocalDate startDate;
